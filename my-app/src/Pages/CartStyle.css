@@ -1,0 +1,81 @@
+.cartLeft{
+  width: 40%;
+}
+
+.cartcontainer{
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  margin-top: 2rem;
+}
+
+
+.cartulList {
+  list-style-type: none;
+  /* display: flex;
+  flex-wrap: wrap; */
+  margin-top: 2rem;
+  padding-inline-start: 0px
+}
+
+.cartulList li {
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.cartcardImg {
+  border-radius: 1rem;
+  width: 8rem;
+  height: 10rem;
+}
+
+.cartcardContent {
+  padding: 0 2rem;
+}
+
+.cartcardTitle {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: 600;
+}
+
+.cartcardAuthor {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.cartcardPrice {
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+
+.cartLeftRight{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+
+.cartRemoveMoveto{
+  display: flex;
+  justify-content: space-around;
+}
+
+.cartRemoveMoveto button{
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.PriceDetailsRight{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 20rem;
+  height: 30rem;
+  /* position: fixed; */
+
+}

@@ -1,0 +1,50 @@
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4.5rem;
+    z-index: 999;
+  }
+
+  .Leftnav {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .Centernav input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .Rightnav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .Rightnav li {
+    margin-left: 2rem;
+    position: relative;
+  }
+  
+ .badge {
+    position: absolute;
+    top: -4px;
+    right: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(189, 163, 17);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }

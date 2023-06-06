@@ -1,0 +1,18 @@
+.profilemaincontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 85vh;
+}
+
+.profilecontainer {
+  display: flex;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  justify-content: space-around;
+}
+
+.ProfileDetails, .MyAddress{
+  text-decoration: underline;
+}

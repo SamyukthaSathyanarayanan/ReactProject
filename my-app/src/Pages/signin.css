@@ -1,0 +1,48 @@
+.container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+}
+
+.signin-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 2rem 5rem;
+}
+
+.emailpasswordinput{
+  display: block;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 15rem;
+}
+
+label{
+  margin: 1rem 0rem;
+}
+
+.signinheading{
+  text-align: center;
+  margin-block-start: 0em;
+}
+
+.login-btn{
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  background-color: orangered;
+  border: inherit;
+  cursor: pointer;
+}
+
+.account{
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 1rem;
+}

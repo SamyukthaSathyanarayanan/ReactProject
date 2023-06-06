@@ -1,0 +1,61 @@
+.IPcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: 90vh;
+}
+
+.IPrightleft{
+  display: flex;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  max-width: 40%;
+}
+.IPLeftImage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.IPcardImg{
+  height: 300px;
+}
+
+.IPRightContent{
+  padding: 0rem 1rem 0rem 1.5rem;
+}
+
+.IPhurry{
+  font-size: small;
+  color: rgb(177, 30, 30);
+
+}
+
+.IPtaggedItems{
+  font-size: small;
+}
+
+.IPaboutbook{
+  margin-top: 1rem;
+}
+
+.IPbook{
+  color: rgb(68, 68, 68);
+  font-size: 0.9rem;
+}
+
+.IPbookdetails{
+  color: rgb(189, 50, 0);
+}
+.IPRightContent p{
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
+}
+
+.IPcartbtn, .IPwishlistbtn{
+  padding: 0.4rem;
+  background-color: orangered;
+  border: none;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 1rem 0rem;
+}
