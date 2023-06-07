@@ -1,0 +1,27 @@
+.checkoutContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.checkoutorderpricedetails{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  padding: 2rem;
+}
+
+.checkoutorderpricedetails ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+
+.checkoutplaceorderbtn{
+  padding: 0.4rem;
+  background-color: orangered;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+}

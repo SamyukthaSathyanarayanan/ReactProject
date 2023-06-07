@@ -17,8 +17,7 @@ export function NavBar(){
           <Link to="/" className="icon-link">Booktopia</Link> 
         </div>
         <div className="Centernav">
-        <input type="text" placeholder="search book name" 
-                onChange={(event)=>searchHandler(event)}/>
+          <input type="text" placeholder="search book name" onChange={(event)=>searchHandler(event)}/>
         </div>
         <div className="Rightnav">
           <ul>

@@ -51,11 +51,17 @@
   margin-block-end: 0.4em;
 }
 
-.IPcartbtn, .IPwishlistbtn{
+.IPRightContent i{
+  margin: 0rem 1rem;
+}
+
+.IPcartLink, .IPwishlistLink{
   padding: 0.4rem;
   background-color: orangered;
-  border: none;
+  text-decoration: none;
   border-radius: 0.5rem;
   display: block;
   margin: 1rem 0rem;
+  color: inherit;
+  
 }

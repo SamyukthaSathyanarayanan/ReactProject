@@ -55,9 +55,11 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin: 10px;
     border-radius: 10px;
-    width: 25%;
+    min-width: 17rem;
+    max-width: 17rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
   }
 
   .cardImg {

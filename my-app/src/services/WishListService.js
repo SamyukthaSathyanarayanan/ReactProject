@@ -16,3 +16,19 @@ export const addToWishListHandler = async (token, product, dispatch)=>{
   }
     
   }
+
+  export const removeFromWishList = async (id, token, dispatch) => {
+    try {
+      const { data: { wishlist } } = await axios.delete(`/api/user/wishlist/${id}`, {
+        headers: {
+          authorization: token,
+        },
+      });
+      dispatch({ type: "wishlist", payload: wishlist }); 
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+ 
+  

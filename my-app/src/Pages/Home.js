@@ -31,19 +31,19 @@ export function Home() {
           <p>Explore a wide variety of book categories at Booktopia</p>
         </div>
         <div className="categories">
-          <button onClick={()=>handlecategory("fiction")} className="category-link">
+          <button onClick={()=>handlecategory("fiction")} className="categorybtn">
             <div className="fiction">  
               <h3>Fiction</h3>
               <p>Immerse yourself in captivating stories, vibrant worlds, and imaginative narratives with our exceptional collection.</p>
             </div>
           </button>
-          <button  onClick={()=>handlecategory("non-fiction")} className="category-link">
+          <button  onClick={()=>handlecategory("non-fiction")} className="categorybtn">
             <div className="non-fiction">  
             <h3>Fantasy</h3>
             <p>Embark on extraordinary journeys, explore mythical realms, and immerse yourself in enchanting tales with our captivating collection of fantasy books.</p>
             </div>
           </button>
-          <button  onClick={()=>handlecategory("biography")} className="category-link">
+          <button  onClick={()=>handlecategory("biography")} className="categorybtn">
             <div className="biography">  
               <h3>Biography</h3>
               <p>Embark on extraordinary journeys, be inspired by remarkable lives, and delve into the depths of human experiences with our compelling selection.</p>

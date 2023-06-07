@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { createProductContext } from "../Context/ProductProvider";
+import { Link } from "react-router-dom";
 import "./IndividualPageStyle.css"
 export function IndividualPage(){
   const { productId } = useParams();
@@ -32,8 +33,8 @@ export function IndividualPage(){
             <p class="IPbook">Language :<span class="IPbookdetails"> {newData?.language}</span> </p>
           </div>
           
-          <button className="IPcartbtn"> <i className="fa-solid fa-cart-shopping"></i> Go to Cart</button> 
-          <button className="IPwishlistbtn"> <i className="fa-regular fa-heart"/> Go to WishList</button>
+          <Link to="/cart" className="IPcartLink"> <i className="fa-solid fa-cart-shopping"></i> Go to Cart</Link > 
+          <Link to="/wishlist" className="IPwishlistLink"> <i className="fa-regular fa-heart"/> Go to WishList</Link>
         </div>
       
       </div>

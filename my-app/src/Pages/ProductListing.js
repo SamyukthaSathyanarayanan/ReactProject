@@ -4,6 +4,7 @@
   import { addToCartHandler } from "../services/CartService";
   import { addToWishListHandler } from "../services/WishListService";
   import { Link } from "react-router-dom";
+  import { toast } from "react-toastify";
   export function ProductListing(){
     const {productState, dispatch} = useContext(createProductContext)
 
@@ -26,40 +27,54 @@
     const newData = productState.selectedCategory?.reduce((initVal,current)=>{
       const booksData = productState.productList?.filter(({categoryName})=>categoryName===current)
       return [...initVal,...booksData]
-  },[])
-  if(newData?.length>0)
-  {
-      console.log(newData);
-      sortedData=newData;
-  }
-  if(productState.searchText!=="")
-  {
-    sortedData = 
-    sortedData.filter(({title})=>title.toLowerCase().includes(productState.searchText.toLowerCase()));
-      
-  }
-    const handleRadioHTL = () => {
-      dispatch({ type: "sort", payload: "dec" });
-    };
-  
-    const handleRadioLTH = () => {
-      dispatch({ type: "sort", payload: "asc" });
-    };
+    },[])
+    if(newData?.length>0)
+    {
 
-    const handleRatingFilter = (rating) => {
-      dispatch({ type: "rating", payload: rating });
-    };
-    const handleCategoryFilter = (category) => {
-      console.log("here");
-      dispatch({ type: "category", payload: category });
-    };
+        sortedData=newData;
+    }
+    if(productState.searchText!=="")
+    {
+      sortedData = 
+      sortedData.filter(({title})=>title.toLowerCase().includes(productState.searchText.toLowerCase()));
+        
+    }
+      const handleRadioHTL = () => {
+        dispatch({ type: "sort", payload: "dec" });
+      };
+    
+      const handleRadioLTH = () => {
+        dispatch({ type: "sort", payload: "asc" });
+      };
 
-    const clearFilters = () => {
-      dispatch({ type: "clearFilter", payload: "" });
-    };
+      const handleRatingFilter = (rating) => {
+        dispatch({ type: "rating", payload: rating });
+      };
+      const handleCategoryFilter = (category) => {
+        dispatch({ type: "category", payload: category });
+      };
+
+      const clearFilters = () => {
+        dispatch({ type: "clearFilter", payload: "" });
+      };
 
 
     const token =  localStorage.getItem("token");
+
+    
+  const addToCart = (product) => {
+    addToCartHandler(token, product, dispatch); 
+    toast.success("Book Added to Cart!", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+  };
+
+  const addToWishList = (product) => {
+    addToWishListHandler(token, product, dispatch); 
+    toast.success("Book Added to Wishlist!", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+  };
 
 
     return(
@@ -78,22 +93,21 @@
               <p>2000</p>
               <p>4000</p>
             </div>
-            <input type="range" min="500" max="4000" 
-            onChange={(event)=>dispatch({type:"priceFilter",payload:event.target.value})} 
+            <input type="range" min="500" max="4000" onChange={(event)=>dispatch({type:"priceFilter",payload:event.target.value})} 
             value={productState.priceRange}/>
   
           </div>
           <h3> Category</h3>
           <label>
-            <input checked={productState.selectedCategory?.includes("fiction")} type="checkbox" value="fiction" onClick={() => handleCategoryFilter("fiction")}/>
+            <input checked={productState.selectedCategory?.includes("fiction")} type="checkbox" value="fiction" onChange={() => handleCategoryFilter("fiction")}/>
             Fiction
           </label>
           <label>
-            <input checked={productState.selectedCategory?.includes("fantacy")} type="checkbox" value="fantacy" onClick={() => handleCategoryFilter("fantacy")} />
+            <input checked={productState.selectedCategory?.includes("fantacy")} type="checkbox" value="fantacy" onChange={() => handleCategoryFilter("fantacy")} />
             Fantacy
           </label>
           <label>
-            <input checked={productState.selectedCategory?.includes("biography")} type="checkbox" value="biography" onClick={() =>handleCategoryFilter("biography")}/>
+            <input checked={productState.selectedCategory?.includes("biography")} type="checkbox" value="biography" onChange={() =>handleCategoryFilter("biography")}/>
             Biography
           </label>
 
@@ -135,7 +149,7 @@
                     <div className="imgContainer">
                     <Link to={`/individualpage/${prods._id}`}><img src={prods.image} alt="loadingimg" className="cardImg"/>  </Link>
                     </div>
-                    <span className="wishlistheart"><i className="fa-regular fa-heart" onClick={()=>addToWishListHandler(token, prods, dispatch)}/> </span>
+                    <span className="wishlistheart"><i className="fa-regular fa-heart" onClick={()=>addToWishList(prods)}/> </span>
                     <div className="carddetails">
                     <div className="cardcontentrating">
                       <div className="cardContent">
@@ -148,7 +162,8 @@
                       </div>
                     </div>
                     </div>
-                      <button className="cardButton" onClick={()=>addToCartHandler(token, prods, dispatch)}> Add to Cart</button>
+                      {/* <button className="cardButton" onClick={()=>addToCartHandler(token, prods, dispatch)}> Add to Cart</button> */}
+                      <button className="cardButton" onClick={()=>addToCart(prods)}> Add to Cart</button>
                      
                     
                   </div>

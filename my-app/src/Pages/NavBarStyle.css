@@ -13,7 +13,7 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
-  .Centernav input[type="search"] {
+  .Centernav input[type="text"] {
     width: 100%;
     padding: 8px;
     border-radius: 5px;

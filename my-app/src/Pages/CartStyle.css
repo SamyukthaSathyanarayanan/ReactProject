@@ -12,8 +12,6 @@
 
 .cartulList {
   list-style-type: none;
-  /* display: flex;
-  flex-wrap: wrap; */
   margin-top: 2rem;
   padding-inline-start: 0px
 }
@@ -73,9 +71,35 @@
 }
 
 .PriceDetailsRight{
+  margin-top: 2rem
+}
+
+
+.cartpricedetail{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   width: 20rem;
-  height: 30rem;
-  /* position: fixed; */
+  padding: 2rem;
+}
 
+.cartpricedetailname{
+  text-decoration: underline;
+  margin-block-start: 0em;
+}
+.cartpricedetail ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  padding-inline-start: 0px;
+}
+
+
+.cartcheckoutLink{
+  margin: 1rem 0rem;
+  padding: 0.4rem;
+  background-color: orangered;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }

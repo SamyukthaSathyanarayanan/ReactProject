@@ -1,5 +1,4 @@
   import { createContext, useEffect, useReducer } from "react";
-  import { products } from "../backend/db/products";
 
   export const createProductContext = createContext();
 
@@ -36,6 +35,7 @@
         return {...state,priceRange:Number(action.payload)}
       case "clearFilter":
         return {...state,selectedCategory:[],priceRange:5000,selectedRating:null, sort:"",searchText:""}
+      
       default:
         return state;
     }
@@ -53,7 +53,6 @@
       isLoading: true,
       priceRange: 1000,
     });
-    console.log(productState.selectedCategory);
     const handleData = async () => {
       const res = await fetch("/api/products");
       const responseJson = await res.json();

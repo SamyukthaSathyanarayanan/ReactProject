@@ -20,7 +20,7 @@ export const addToCartHandler = async (token, product, dispatch)=>{
   export const updatedQuantityinCart = async(id,dispatch,token,updateType)=>
 {
     try{
-        const {data:{cart}} = await axios.post(`api/user/cart/${id}`,{
+        const {data:{cart}} = await axios.post(`/api/user/cart/${id}`,{
             action:{
                 type:updateType==="+"?"increment":"decrement",
             },
@@ -37,3 +37,21 @@ export const addToCartHandler = async (token, product, dispatch)=>{
         console.log(error);
     }
   }
+
+  export const removeFromCart = async (id,token,dispatch)=>{
+    try{
+        const {data:{cart}} = await axios.delete(`/api/user/cart/${id}`,
+        {
+            headers:{
+            authorization: token,
+            }
+        }
+        )
+         dispatch({type:"cart",payload:cart})                   
+    }
+    catch(error)
+    {
+        console.log("Error in addToCart service", error);
+    }
+   
+}
