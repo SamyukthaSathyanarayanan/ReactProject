@@ -17,7 +17,7 @@ export function Checkout() {
   }
   return (
     <>
-      <div className="checkoutContainer">
+      <div className="checkoutContainer"> 
         <div className="checkoutorderpricedetails">
           <hr />
           <h3>ORDER DETAILS</h3>
@@ -26,10 +26,15 @@ export function Checkout() {
             <li>Item</li>
             <li>Qty</li>
           </ul>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
+          
+          { productState.cartList?.map(({_id,title,qty})=>
+            <div key={_id} className="bookNameqty">
+                 <ul className="mapul">
+                  <li className="bookTitle">{title} </li>
+                  <li className="bookQty">{qty} </li>
+                </ul>
+           </div>)}
+          
           <hr />
           <h3>PRICE DETAILS</h3>
           <ul>

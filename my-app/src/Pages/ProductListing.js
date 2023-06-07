@@ -150,6 +150,7 @@
                     <Link to={`/individualpage/${prods._id}`}><img src={prods.image} alt="loadingimg" className="cardImg"/>  </Link>
                     </div>
                     <span className="wishlistheart"><i className="fa-regular fa-heart" onClick={()=>addToWishList(prods)}/> </span>
+
                     <div className="carddetails">
                     <div className="cardcontentrating">
                       <div className="cardContent">
@@ -163,7 +164,13 @@
                     </div>
                     </div>
                       {/* <button className="cardButton" onClick={()=>addToCartHandler(token, prods, dispatch)}> Add to Cart</button> */}
-                      <button className="cardButton" onClick={()=>addToCart(prods)}> Add to Cart</button>
+                      {/* <button className="cardButton" onClick={()=>addToCart(prods)}> Add to Cart</button> */}
+                      {productState.cartList.find((item) => item._id === prods._id) ? (
+                      <button disabled className="cardButton disabled">Added to Cart</button>
+                    ) : (
+                      <button className="cardButton" onClick={() => addToCart(prods)}>Add to Cart</button>
+                    )}
+
                      
                     
                   </div>

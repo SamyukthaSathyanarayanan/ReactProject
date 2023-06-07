@@ -35,7 +35,8 @@
         return {...state,priceRange:Number(action.payload)}
       case "clearFilter":
         return {...state,selectedCategory:[],priceRange:5000,selectedRating:null, sort:"",searchText:""}
-      
+      case "log_out":
+        return {...state,wishList:[],cartList:[]};
       default:
         return state;
     }

@@ -22,7 +22,7 @@ export function Signin(){
               <input id="password-input" type="password" placeholder="*********" className="emailpasswordinput"/>
            
             <button className="login-btn" onClick={btnhandler}> Login with Test Credentials</button>
-            <Link to="/signup" className="account"> Create New Account &#x003E;</Link>
+            {/* <Link to="/signup" className="account"> Create New Account &#x003E;</Link> */}
         </div>
     </div>
    

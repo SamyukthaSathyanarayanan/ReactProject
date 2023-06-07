@@ -18,6 +18,14 @@
   padding-inline-start: 0px;
 }
 
+.mapul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+
+
 .checkoutplaceorderbtn{
   padding: 0.4rem;
   background-color: orangered;
