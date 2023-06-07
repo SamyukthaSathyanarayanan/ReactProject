@@ -15,6 +15,7 @@
       case "rating":
         return { ...state, selectedRating: action.payload };
       case "category":
+        console.log("in category");
         let newCat=[];
             if(state.selectedCategory?.find(element=>element===action.payload.currentCat)){
                 if(action.payload.page==="landing")

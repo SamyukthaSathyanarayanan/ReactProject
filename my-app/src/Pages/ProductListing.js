@@ -51,7 +51,8 @@
         dispatch({ type: "rating", payload: rating });
       };
       const handleCategoryFilter = (category) => {
-        dispatch({ type: "category", payload: category });
+        console.log("function");
+        dispatch({ type: "category", payload:{currentCat:category,page:"listing"} });
       };
 
       const clearFilters = () => {
@@ -99,15 +100,15 @@
           </div>
           <h3> Category</h3>
           <label>
-            <input checked={productState.selectedCategory?.includes("fiction")} type="checkbox" value="fiction" onChange={() => handleCategoryFilter("fiction")}/>
+            <input checked={productState.selectedCategory?.includes("Fiction")} type="checkbox"  onChange={() => handleCategoryFilter("Fiction")}/>
             Fiction
           </label>
           <label>
-            <input checked={productState.selectedCategory?.includes("fantacy")} type="checkbox" value="fantacy" onChange={() => handleCategoryFilter("fantacy")} />
-            Fantacy
+            <input checked={productState.selectedCategory?.includes("Fantasy")} type="checkbox"  onChange={() => handleCategoryFilter("Fantasy")} />
+            Fantasy
           </label>
           <label>
-            <input checked={productState.selectedCategory?.includes("biography")} type="checkbox" value="biography" onChange={() =>handleCategoryFilter("biography")}/>
+            <input checked={productState.selectedCategory?.includes("Biography")} type="checkbox" onChange={() =>handleCategoryFilter("Biography")}/>
             Biography
           </label>
 
